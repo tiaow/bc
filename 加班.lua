@@ -60,24 +60,6 @@ credits:AddToggle({
 		end
 	end
 })
-credits:AddButton({
-  "自动互动",
-  function()
-          if state then
-            autoInteract = true
-            while autoInteract do
-                for _, descendant in pairs(workspace:GetDescendants()) do
-                    if descendant:IsA("ProximityPrompt") then
-                        fireproximityprompt(descendant)
-                    end
-                end
-                task.wait(0.25) -- Adjust the wait time as needed
-            end
-        else
-            false
-        end
-  end
-})
    local creds = window:Tab("传送",'16060333448')                  
 local credits = creds:section("传送功能",true)
     if getgenv().ED_AntiKick then
