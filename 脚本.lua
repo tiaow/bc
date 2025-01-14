@@ -60,9 +60,8 @@ local credits = creds:section("通用",true)
         else
             game.Lighting.Ambient = Color3.new(0, 0, 0)
         end
-    end
-)
-  local creds = window:Tab("传送",'16060333448')             
+    end)
+local creds = window:Tab("传送",'16060333448')             
 local credits = creds:section("传送功能",true)
     if getgenv().ED_AntiKick then
 	return
