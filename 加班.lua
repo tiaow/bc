@@ -53,6 +53,69 @@ local credits = creds:section("内容",true)
 credits:Toggle("夜视", "Light", false, function(Light)
   spawn(function() while task.wait() do if Light then game.Lighting.Ambient = Color3.new(1, 1, 1) else game.Lighting.Ambient = Color3.new(0, 0, 0) end end end)
 end)
+credits:Button(
+    "甩飞所有人",
+    function()
+    local cam = workspace.CurrentCamera
+local RS = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
+local Flashlight = RS.Flashlight
+local Clone = Flashlight:Clone()
+Clone.Parent = script.Parent
+
+local Brightness = 5
+
+local Keybind = Enum.KeyCode.F
+
+local UIS = game:GetService("UserInputService")
+
+local Toggle = false
+
+local Mouse = game.Players.LocalPlayer:GetMouse()
+
+local TS = game:GetService("TweenService")
+local TI = TweenInfo.new(.1, Enum.EasingStyle.Sine)
+
+
+UIS.InputBegan:Connect(function(Input, p)
+	if p then return end
+	if Input.KeyCode == Keybind then
+		Toggle = not Toggle
+	end
+end)
+
+RunService.RenderStepped:Connect(function()
+	if Clone then
+		
+		Clone.Position = cam.CFrame.Position
+		TS:Create(Clone, TI, {CFrame = CFrame.lookAt(Clone.Position, Mouse.Hit.Position)}):Play()
+		
+		if Toggle then
+			TS:Create(Clone.SpotLight, TI, {Brightness = Brightness}):Play()
+			
+		else
+			TS:Create(Clone.SpotLight, TI, {Brightness = 0}):Play()
+		end
+
+	end
+end)
+    end)
+Player:Button(
+    "旋转",
+    function()
+    local speed = 50
+
+local plr = game:GetService("Players").LocalPlayer
+repeat task.wait() until plr.Character
+local humRoot = plr.Character:WaitForChild("HumanoidRootPart")
+plr.Character:WaitForChild("Humanoid").AutoRotate = false
+local velocity = Instance.new("AngularVelocity")
+velocity.Attachment0 = humRoot:WaitForChild("RootAttachment")
+velocity.MaxTorque = math.huge
+velocity.AngularVelocity = Vector3.new(0, speed, 0)
+velocity.Parent = humRoot
+velocity.Name = "Spinbot"
+    end)
 
    local creds = window:Tab("传送",'16060333448')                  
 local credits = creds:section("传送功能",true)
