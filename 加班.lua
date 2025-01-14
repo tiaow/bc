@@ -49,9 +49,9 @@ end)                                                                            
   game.Players.LocalPlayer.Character.Humanoid.Health=0
 end)                                                                                 
 credits:AddToggle({
-	Name = "夜视",
-	Default = false,
-	Callback = function(Value)
+	"夜视",
+	false,
+	function(Value)
 
 		if Value then
 		    game.Lighting.Ambient = Color3.new(1, 1, 1)
@@ -61,8 +61,8 @@ credits:AddToggle({
 	end
 })
 credits:AddButton({
-  Name = "自动互动",
-  Callback = function()
+  "自动互动",
+  function()
           if state then
             autoInteract = true
             while autoInteract do
@@ -74,7 +74,7 @@ credits:AddButton({
                 task.wait(0.25) -- Adjust the wait time as needed
             end
         else
-            autoInteract = false
+            false
         end
   end
 })
