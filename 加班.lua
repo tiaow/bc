@@ -197,15 +197,15 @@ local credits = creds:section("Doors脚本",true)
     loadstring(game:HttpGet'https://raw.githubusercontent.com/Dusty1234567890/NewGloves/refs/heads/main/Clock')()
     end)
  local creds = window:Tab("力量传奇",'16060333448')
-local tab = creds:section("岩石功能")
-local tab2 = creds:section("跑步机功能")
-local tab3 = creds:section("深蹲架功能")
-local tab4 = creds:section("引体向上功能")
-local tab5 = creds:section("卧推功能")
-local tab6 = creds:section("投掷功能")
-local tab7 = creds:section("自动功能")
+local credits = creds:section("岩石功能")
+local credits2 = creds:section("跑步机功能")
+local credits3 = creds:section("深蹲架功能")
+local credits4 = creds:section("引体向上功能")
+local credits5 = creds:section("卧推功能")
+local credits6 = creds:section("投掷功能")
+local credits7 = creds:section("自动功能")
 
-tab:Toggle("传送安全地方", false, function(place)
+credits:Toggle("传送安全地方", false, function(place)
     if place then
 getgenv().place = true
 while getgenv().place do
@@ -219,7 +219,7 @@ game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFr
 end
 end)
 
-tab:Toggle("自动打石头0", false, function(rock)
+credits:Toggle("自动打石头0", false, function(rock)
     getgenv().rock = rock
 while getgenv().rock do
 wait()
@@ -240,7 +240,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):UnequipTools()
 end
 end)
 
-tab:Toggle("自动打石头10", false, function(rock)
+credits:Toggle("自动打石头10", false, function(rock)
      if game.Players.LocalPlayer.Durability.Value >= 10 then
 getgenv().rock = rock
 while getgenv().rock do
@@ -263,7 +263,7 @@ end
 end
 end)
 
-tab:Toggle("自动打石头100", false, function(rock)
+credits:Toggle("自动打石头100", false, function(rock)
     if game.Players.LocalPlayer.Durability.Value >= 100 then
 getgenv().rock = rock
 while getgenv().rock do
@@ -286,7 +286,7 @@ end
 end
 end)
 
-tab:Toggle("自动打石头5000", false, function(rock)
+credits:Toggle("自动打石头5000", false, function(rock)
      if game.Players.LocalPlayer.Durability.Value >= 5000 then
 getgenv().rock = rock
 while getgenv().rock do
@@ -309,7 +309,7 @@ end
 end
 end)
 
-tab:Toggle("自动打石头150000", false, function(rock)
+credits:Toggle("自动打石头150000", false, function(rock)
      if game.Players.LocalPlayer.Durability.Value >= 150000 then
 getgenv().rock = rock
 while getgenv().rock do
@@ -332,7 +332,7 @@ end
 end
 end)
 
-tab:Toggle("自动打石头400000", false, function(rock)
+credits:Toggle("自动打石头400000", false, function(rock)
     if game.Players.LocalPlayer.Durability.Value >= 400000 then
 getgenv().rock = rock
 while getgenv().rock do
@@ -355,7 +355,7 @@ end
 end
 end)
 
-tab:Toggle("自动打石头750000", false, function(rock)
+credits:Toggle("自动打石头750000", false, function(rock)
     if game.Players.LocalPlayer.Durability.Value >= 750000 then
 getgenv().rock = rock
 while getgenv().rock do
@@ -378,7 +378,7 @@ end
 end
 end)
 
-tab:Toggle("自动打石头100万", false, function(rock)
+credits:Toggle("自动打石头100万", false, function(rock)
     if game.Players.LocalPlayer.Durability.Value >= 1000000 then
 getgenv().rock = rock
 while getgenv().rock do
@@ -401,7 +401,7 @@ end
 end
 end)
 
-tab:Toggle("自动打石头500万", false, function(rock)
+credits:Toggle("自动打石头500万", false, function(rock)
     if game.Players.LocalPlayer.Durability.Value >= 5000000 then
 getgenv().rock = rock
 while getgenv().rock do
@@ -424,7 +424,7 @@ end
 end
 end)
 
-tab2:Toggle("海滩跑步机10", false, function(treadmill)
+credits2:Toggle("海滩跑步机10", false, function(treadmill)
     getgenv().spam = treadmill
 while getgenv().spam do
 wait()
@@ -471,7 +471,7 @@ RunService:UnbindFromRenderStep("move",
 end
 end)
 
-tab2:Toggle("健身房跑步机2000", false, function(treadmill)
+credits2:Toggle("健身房跑步机2000", false, function(treadmill)
     if game.Players.LocalPlayer.Agility.Value >= 2000 then
 getgenv().spam = treadmill
 while getgenv().spam do
@@ -520,7 +520,7 @@ RunService:UnbindFromRenderStep("move",
 end
 end)
 
-tab2:Toggle("神话健身房跑步机2000", false, function(treadmill)
+credits2:Toggle("神话健身房跑步机2000", false, function(treadmill)
     if game.Players.LocalPlayer.Agility.Value >= 2000 then
 getgenv().spam = treadmill
 while getgenv().spam do
@@ -569,7 +569,7 @@ RunService:UnbindFromRenderStep("move",
 end
 end)
 
-tab2:Toggle("永恒健身房跑步机3500", false, function(treadmill)
+credits2:Toggle("永恒健身房跑步机3500", false, function(treadmill)
     if game.Players.LocalPlayer.Agility.Value >= 3500 then
 getgenv().spam = treadmill
 while getgenv().spam do
@@ -618,7 +618,7 @@ RunService:UnbindFromRenderStep("move",
 end
 end)
 
-tab2:Toggle("传奇健身房跑步机3000", false, function(treadmill)
+credits2:Toggle("传奇健身房跑步机3000", false, function(treadmill)
     if game.Players.LocalPlayer.Agility.Value >= 3000 then
 getgenv().spam = treadmill
 while getgenv().spam do
@@ -667,7 +667,7 @@ RunService:UnbindFromRenderStep("move",
 end
 end)
 
-tab3:Toggle("沙滩深蹲架", false, function(rack)
+credits3:Toggle("沙滩深蹲架", false, function(rack)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 1000 then
 getgenv().spam = rack
 while getgenv().spam do
@@ -689,7 +689,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab3:Toggle("深蹲架霜冻健身房", false, function(rack)
+credits3:Toggle("深蹲架霜冻健身房", false, function(rack)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 4000 then
 getgenv().spam = rack
 while getgenv().spam do
@@ -711,7 +711,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab3:Toggle("深蹲架传奇健身房", false, function(rack)
+credits3:Toggle("深蹲架传奇健身房", false, function(rack)
     getgenv().spam = rack
 while getgenv().spam do
 wait()
@@ -731,7 +731,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab3:Toggle("深蹲架肌肉健身房", false, function(rack)
+credits3:Toggle("深蹲架肌肉健身房", false, function(rack)
     getgenv().spam = rack
 while getgenv().spam do
 wait()
@@ -751,7 +751,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab4:Toggle("引体向上海滩", false, function(pull)
+credits4:Toggle("引体向上海滩", false, function(pull)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 1000 then
 getgenv().spam = pull
 while getgenv().spam do
@@ -773,7 +773,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab4:Toggle("引体向上神话游戏", false, function(pull)
+credits4:Toggle("引体向上神话游戏", false, function(pull)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 4000 then
 getgenv().spam = pull
 while getgenv().spam do
@@ -795,7 +795,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab4:Toggle("引体向上传奇健身房", false, function(pull)
+credits4:Toggle("引体向上传奇健身房", false, function(pull)
     getgenv().spam = pull
 while getgenv().spam do
 wait()
@@ -815,7 +815,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab5:Toggle("卧推海滩", false, function(bench)
+credits5:Toggle("卧推海滩", false, function(bench)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 150 then
 getgenv().spam = bench
 while getgenv().spam do
@@ -837,7 +837,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab5:Toggle("卧推冰上体操", false, function(bench)
+credits5:Toggle("卧推冰上体操", false, function(bench)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 7500 then
 getgenv().spam = bench
 while getgenv().spam do
@@ -859,7 +859,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab5:Toggle("卧推神话游戏", false, function(bench)
+credits5:Toggle("卧推神话游戏", false, function(bench)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 15000 then
 getgenv().spam = bench
 while getgenv().spam do
@@ -881,7 +881,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab5:Toggle("卧推永恒健身房", false, function(bench)
+credits5:Toggle("卧推永恒健身房", false, function(bench)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 15000 then
 getgenv().spam = bench
 while getgenv().spam do
@@ -903,7 +903,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab5:Toggle("卧推传奇体操", false, function(bench)
+credits5:Toggle("卧推传奇体操", false, function(bench)
     getgenv().spam = bench
 while getgenv().spam do
 wait()
@@ -923,7 +923,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab5:Toggle("卧推肌肉运动", false, function(bench)
+credits5:Toggle("卧推肌肉运动", false, function(bench)
     getgenv().spam = bench
 while getgenv().spam do
 wait()
@@ -943,7 +943,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab6:Toggle("投掷海滩", false , function(lift)
+credits6:Toggle("投掷海滩", false , function(lift)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 3000 then
 getgenv().spam = lift
 while getgenv().spam do
@@ -965,7 +965,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab6:Toggle("扔神话游戏", false, function(lift)
+credits6:Toggle("扔神话游戏", false, function(lift)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 10000 then
 getgenv().spam = lift
 while getgenv().spam do
@@ -987,7 +987,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab6:Toggle("投掷传奇体操", false, function(lift)
+credits6:Toggle("投掷传奇体操", false, function(lift)
     getgenv().spam = lift
 while getgenv().spam do
 wait()
@@ -1007,7 +1007,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 
-tab6:Toggle("投掷肌肉", false, function(lift)
+credits6:Toggle("投掷肌肉", false, function(lift)
     getgenv().spam = lift
 while getgenv().spam do
 wait()
@@ -1030,7 +1030,7 @@ end)
 noCD = false
 punchCooldown = 0.35
 
-tab7:Toggle("自动挥拳", false, function(Value)
+credits7:Toggle("自动挥拳", false, function(Value)
     autopunch = Value
 		game:GetService("RunService").Stepped:connect(
 		function()
@@ -1053,7 +1053,7 @@ tab7:Toggle("自动挥拳", false, function(Value)
 		)
 end)
 
-tab7:Toggle("挥拳无间隔", false, function(Value)
+credits7:Toggle("挥拳无间隔", false, function(Value)
     noCD = Value
 		if noCD then
 			game:GetService("Players").LocalPlayer.Backpack.Punch:FindFirstChildOfClass("NumberValue").Value = 0
@@ -1064,7 +1064,7 @@ end)
 
 br = false
 
-tab7:Toggle("自动刷业报", false, function(Value)
+credits7:Toggle("自动刷业报", false, function(Value)
 br = Value
 		while br do
 			local randomPlayer = game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]
