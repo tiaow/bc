@@ -32,9 +32,6 @@ end)
     credits:Slider("步行速度!", "WalkSpeed", game.Players.LocalPlayer.Character.Humanoid.WalkSpeed, 16, 400, false, function(Speed)
   spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed end end)
 end)
-    credits:Slider("重力设置!", "Gravity", game.Players.LocalPlayer.Character.Humanoid.Gravity, 50, 400, false, function(Gravity)
-  spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.Gravity = Gravity end end)
-end)
     credits:Toggle("穿墙", "NoClip", false, function(NC)
   local Workspace = game:GetService("Workspace") local Players = game:GetService("Players") if NC then Clipon = true else Clipon = false end Stepped = game:GetService("RunService").Stepped:Connect(function() if not Clipon == false then for a, b in pairs(Workspace:GetChildren()) do if b.Name == Players.LocalPlayer.Name then for i, v in pairs(Workspace[Players.LocalPlayer.Name]:GetChildren()) do if v:IsA("BasePart") then v.CanCollide = false end end end end else Stepped:Disconnect() end end)
 end)
@@ -50,7 +47,38 @@ end)                                                                            
   loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
 end)                                                                                            credits:Button("立即死亡",function()
   game.Players.LocalPlayer.Character.Humanoid.Health=0
-end)                                                                                             local creds = window:Tab("传送",'16060333448')                  
+end)                                                                                 
+credits:AddToggle({
+	Name = "夜视",
+	Default = false,
+	Callback = function(Value)
+
+		if Value then
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+		else
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+		end
+	end
+})
+credits:AddButton({
+  Name = "自动互动",
+  Callback = function()
+          if state then
+            autoInteract = true
+            while autoInteract do
+                for _, descendant in pairs(workspace:GetDescendants()) do
+                    if descendant:IsA("ProximityPrompt") then
+                        fireproximityprompt(descendant)
+                    end
+                end
+                task.wait(0.25) -- Adjust the wait time as needed
+            end
+        else
+            autoInteract = false
+        end
+  end
+})
+   local creds = window:Tab("传送",'16060333448')                  
 local credits = creds:section("传送功能",true)
     if getgenv().ED_AntiKick then
 	return
