@@ -48,18 +48,12 @@ end)                                                                            
 end)                                                                                            credits:Button("立即死亡",function()
   game.Players.LocalPlayer.Character.Humanoid.Health=0
 end)                                                                                 
-credits:AddToggle({
-	"夜视",
-	false,
-	function(Value)
+local creds = window:Tab("通用2",'16060333448')
+local credits = creds:section("内容",true)      
+credits:Toggle("夜视", "Light", false, function(Light)
+  spawn(function() while task.wait() do if Light then game.Lighting.Ambient = Color3.new(1, 1, 1) else game.Lighting.Ambient = Color3.new(0, 0, 0) end end end)
+end)
 
-		if Value then
-		    game.Lighting.Ambient = Color3.new(1, 1, 1)
-		else
-		    game.Lighting.Ambient = Color3.new(0, 0, 0)
-		end
-	end
-})
    local creds = window:Tab("传送",'16060333448')                  
 local credits = creds:section("传送功能",true)
     if getgenv().ED_AntiKick then
