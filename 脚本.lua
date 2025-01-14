@@ -48,8 +48,7 @@ end)                                                                            
   loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
 end)                                                                                            credits:Button("立即死亡",function()
   game.Players.LocalPlayer.Character.Humanoid.Health=0
-end)                                               
-                                                                                                        
+end)                                                                                             
 local creds = window:Tab("通用2",'16060333448')
 local credits = creds:section("通用",true)"
     credits:Toggle(
@@ -198,8 +197,11 @@ local creds = window:Tab("巴掌",'16060333448')
 local credits = creds:section("巴掌",true)
     credits:Button("刷bob", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/Bobfarmupd/main/Bobfarm"))()
+    end)
     credits:Button("巴掌最强脚本", function()
     oadstring(game:HttpGet("https://pastefy.app/VCVehBWE/raw"))()
+    end)
     credits:Button("终极bob速刷", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/Rob/main/Rob"))()
+    end)
     
