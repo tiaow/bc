@@ -204,7 +204,7 @@ local credits4 = creds:section("引体向上功能")
 local credits5 = creds:section("卧推功能")
 local credits6 = creds:section("投掷功能")
 local credits7 = creds:section("自动功能")
-credits:Toggle("传送安全地方", false, function(place)
+credits7:Toggle("传送安全地方", false, function(place)
     if place then
 getgenv().place = true
 while getgenv().place do
