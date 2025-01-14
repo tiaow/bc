@@ -1,5 +1,5 @@
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/nBq2D86q"))()
-local window = library:new("")
+local window = library:new("逆天了，老弟")
 
 local creds = window:Tab("信息",'16060333448')
 
@@ -26,10 +26,10 @@ credits:Toggle("脚本框架变小一点", "", false, function(state)
 local creds = window:Tab("通用",'16060333448')
 
 local credits = creds:section("内容",true)                                                           
-    credits:Slider("跳跃高度!", "JumpPower", game.Players.LocalPlayer.Character.Humanoid.JumpPower, 50, 1000, false, function(Jump)
+    credits:Slider("跳跃高度!", "JumpPower", game.Players.LocalPlayer.Character.Humanoid.JumpPower, 50, 400, false, function(Jump)
   spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.JumpPower = Jump end end)
 end)
-    credits:Slider("步行速度!", "WalkSpeed", game.Players.LocalPlayer.Character.Humanoid.WalkSpeed, 16, 1000, false, function(Speed)
+    credits:Slider("步行速度!", "WalkSpeed", game.Players.LocalPlayer.Character.Humanoid.WalkSpeed, 16, 400, false, function(Speed)
   spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed end end)
 end)
     credits:Toggle("穿墙", "NoClip", false, function(NC)
@@ -47,8 +47,7 @@ end)                                                                            
   loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
 end)                                                                                            credits:Button("立即死亡",function()
   game.Players.LocalPlayer.Character.Humanoid.Health=0
-end)                                                                                                                                                        
-local creds = window:Tab("传送",'16060333448')
+end)                                                                                             local creds = window:Tab("传送",'16060333448')                  
 local credits = creds:section("传送功能",true)
     if getgenv().ED_AntiKick then
 	return
@@ -100,9 +99,9 @@ credits:Button("传送到玩家旁边一次", function()
     local tp_player = game.Players:FindFirstChild(playernamedied)
     if tp_player and tp_player.Character and tp_player.Character.HumanoidRootPart then
         HumRoot.CFrame = tp_player.Character.HumanoidRootPart.CFrame + Vector3.new(0, 3, 0)
-        Notify("credits", "成功", "rbxassetid://", 5)
+        Notify("提示", "成功", "rbxassetid://", 5)
     else
-        Notify("credits", "没有目标", "rbxassetid://", 5)
+        Notify("提示", "没有目标", "rbxassetid://", 5)
     end
 end)
 
@@ -111,9 +110,9 @@ credits:Button("把玩家传送过来", function()
     local tp_player = game.Players:FindFirstChild(playernamedied)
     if tp_player and tp_player.Character and tp_player.Character.HumanoidRootPart then
         tp_player.Character.HumanoidRootPart.CFrame = HumRoot.CFrame + Vector3.new(0, 3, 0)
-        Notify("credits", "已传送过来", "rbxassetid://", 5)
+        Notify("提示", "已传送过来", "rbxassetid://", 5)
     else
-        Notify("credits", "没有目标", "rbxassetid://", 5)
+        Notify("提示", "没有目标", "rbxassetid://", 5)
     end
 end)
 
@@ -121,9 +120,9 @@ credits:Toggle("查看玩家", 'Toggleflag', false, function(state)
     if state then
         game:GetService('Workspace').CurrentCamera.CameraSubject =
             game:GetService('Players'):FindFirstChild(playernamedied).Character.Humanoid
-            Notify("credits", "已查看", "rbxassetid://", 5)
+            Notify("提示", "已查看", "rbxassetid://", 5)
     else
-        Notify("credits", "已关闭", "rbxassetid://", 5)
+        Notify("提示", "已关闭", "rbxassetid://", 5)
         local lp = game.Players.LocalPlayer
         game:GetService('Workspace').CurrentCamera.CameraSubject = lp.Character.Humanoid
     end
@@ -151,20 +150,22 @@ credits:Toggle("循环传送玩家", "Toggle", false, function(Value)
             end)
             
         else
-            Notify("credits", "玩家或角色不存在，无法启动循环传送", "rbxassetid://", 5)
+            Notify("提示", "玩家或角色不存在，无法启动循环传送", "rbxassetid://", 5)
         end
     else
         
         if teleportConnection then
-            teleportConnection:Disconnect(
+            teleportConnection:Disconnect()
+            teleportConnection = nil
         end
-        Notify("credits", "已停止循环传送玩家", "rbxassetid://", 5)
+        Notify("提示", "已停止循环传送玩家", "rbxassetid://", 5)
     end
 end)
 local creds = window:Tab("伐木大亨2",'16060333448')
 local credits = creds:section("伐木大亨",true)
-    credits:Button("伐木大亨2(造船好像也能用)", function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf"))()
+  credits:Button("LuaWareL", function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))()
    end)
-local creds = window:Tab("待开发类别",'16060333448')
-local credits = creds:section("待开发j",true)
+   credits:Button("伐木大亨脚本", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/Kavo-Ui/main/%E4%BC%90%E6%9C%A8%E5%A4%A7%E4%BA%A82.lua", true))()
+   end)
