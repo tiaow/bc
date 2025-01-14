@@ -64,8 +64,8 @@ local credits = creds:section("通用",true)"
         end
     end)
     
-local CS = window:Tab("传送",'16060333448')             
-local credits = CS:section("传送功能",true)
+local creds = window:Tab("传送",'16060333448')             
+local credits = creds:section("传送功能",true)
     if getgenv().ED_AntiKick then
 	return
 end
@@ -93,7 +93,7 @@ function Notify(top, text, ico, dur)
   })
 end
 
-CS:Dropdown("选择玩家", 'Dropdown', dropdown, function(v)
+credits:Dropdown("选择玩家", 'Dropdown', dropdown, function(v)
     playernamedied = v
 end)
 
@@ -111,7 +111,7 @@ game.Players.ChildRemoved:Connect(function(player)
     end
 end)
 
-CS:Button("传送到玩家旁边一次", function()
+credits:Button("传送到玩家旁边一次", function()
     local HumRoot = game.Players.LocalPlayer.Character.HumanoidRootPart
     local tp_player = game.Players:FindFirstChild(playernamedied)
     if tp_player and tp_player.Character and tp_player.Character.HumanoidRootPart then
@@ -122,7 +122,7 @@ CS:Button("传送到玩家旁边一次", function()
     end
 end)
 
-CS:Button("把玩家传送过来", function()
+credits:Button("把玩家传送过来", function()
     local HumRoot = game.Players.LocalPlayer.Character.HumanoidRootPart
     local tp_player = game.Players:FindFirstChild(playernamedied)
     if tp_player and tp_player.Character and tp_player.Character.HumanoidRootPart then
@@ -133,7 +133,7 @@ CS:Button("把玩家传送过来", function()
     end
 end)
 
-CS:Toggle("查看玩家", 'Toggleflag', false, function(state)
+credits:Toggle("查看玩家", 'Toggleflag', false, function(state)
     if state then
         game:GetService('Workspace').CurrentCamera.CameraSubject =
             game:GetService('Players'):FindFirstChild(playernamedied).Character.Humanoid
@@ -144,7 +144,7 @@ CS:Toggle("查看玩家", 'Toggleflag', false, function(state)
         game:GetService('Workspace').CurrentCamera.CameraSubject = lp.Character.Humanoid
     end
 end)
-CS:Toggle("循环传送玩家", "Toggle", false, function(Value)
+credits:Toggle("循环传送玩家", "Toggle", false, function(Value)
     if Value then
         local localPlayer = game.Players.LocalPlayer
         local targetPlayer = game.Players:FindFirstChild(playernamedied)
@@ -194,3 +194,12 @@ local credits = creds:section("Doors脚本",true)
     credits:Button("BoBHub汉化", function()
  loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\53\84\119\84\56\106\97"))()
     end)
+local creds = window:Tab("巴掌",'16060333448')
+local credits = creds:section("巴掌",true)
+    credits:Button("刷bob", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/Bobfarmupd/main/Bobfarm"))()
+    credits:Button("巴掌最强脚本", function()
+    oadstring(game:HttpGet("https://pastefy.app/VCVehBWE/raw"))()
+    credits:Button("终极bob速刷", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/Rob/main/Rob"))()
+    
