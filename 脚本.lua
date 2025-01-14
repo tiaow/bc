@@ -32,6 +32,7 @@ end)
     credits:Slider("步行速度!", "WalkSpeed", game.Players.LocalPlayer.Character.Humanoid.WalkSpeed, 16, 400, false, function(Speed)
   spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed end end)
 end)
+    
     credits:Toggle("穿墙", "NoClip", false, function(NC)
   local Workspace = game:GetService("Workspace") local Players = game:GetService("Players") if NC then Clipon = true else Clipon = false end Stepped = game:GetService("RunService").Stepped:Connect(function() if not Clipon == false then for a, b in pairs(Workspace:GetChildren()) do if b.Name == Players.LocalPlayer.Name then for i, v in pairs(Workspace[Players.LocalPlayer.Name]:GetChildren()) do if v:IsA("BasePart") then v.CanCollide = false end end end end else Stepped:Disconnect() end end)
 end)
@@ -47,9 +48,10 @@ end)                                                                            
   loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
 end)                                                                                            credits:Button("立即死亡",function()
   game.Players.LocalPlayer.Character.Humanoid.Health=0
-end)                                                                                                                                                   
+end)                                               
+                                                                                                        
 local creds = window:Tab("通用2",'16060333448')
-local credits = creds:section("通用",true)
+local credits = creds:section("通用",true)"
     credits:Toggle(
     "夜视",
     "text",
@@ -61,55 +63,9 @@ local credits = creds:section("通用",true)
             game.Lighting.Ambient = Color3.new(0, 0, 0)
         end
     end)
-    credits:Button(
-    "甩飞所有人",
-    function()
-    local cam = workspace.CurrentCamera
-local RS = game:GetService("ReplicatedStorage")
-local RunService = game:GetService("RunService")
-local Flashlight = RS.Flashlight
-local Clone = Flashlight:Clone()
-Clone.Parent = script.Parent
-
-local Brightness = 5
-
-local Keybind = Enum.KeyCode.F
-
-local UIS = game:GetService("UserInputService")
-
-local Toggle = false
-
-local Mouse = game.Players.LocalPlayer:GetMouse()
-
-local TS = game:GetService("TweenService")
-local TI = TweenInfo.new(.1, Enum.EasingStyle.Sine)
-
-
-UIS.InputBegan:Connect(function(Input, p)
-	if p then return end
-	if Input.KeyCode == Keybind then
-		Toggle = not Toggle
-	end
-end)
-
-RunService.RenderStepped:Connect(function()
-	if Clone then
-		
-		Clone.Position = cam.CFrame.Position
-		TS:Create(Clone, TI, {CFrame = CFrame.lookAt(Clone.Position, Mouse.Hit.Position)}):Play()
-		
-		if Toggle then
-			TS:Create(Clone.SpotLight, TI, {Brightness = Brightness}):Play()
-			
-		else
-			TS:Create(Clone.SpotLight, TI, {Brightness = 0}):Play()
-		end
-
-	end
-end)
     
-local creds = window:Tab("传送",'16060333448')             
-local credits = creds:section("传送功能",true)
+local CS = window:Tab("传送",'16060333448')             
+local credits = CS:section("传送功能",true)
     if getgenv().ED_AntiKick then
 	return
 end
@@ -137,7 +93,7 @@ function Notify(top, text, ico, dur)
   })
 end
 
-credits:Dropdown("选择玩家", 'Dropdown', dropdown, function(v)
+CS:Dropdown("选择玩家", 'Dropdown', dropdown, function(v)
     playernamedied = v
 end)
 
@@ -155,7 +111,7 @@ game.Players.ChildRemoved:Connect(function(player)
     end
 end)
 
-credits:Button("传送到玩家旁边一次", function()
+CS:Button("传送到玩家旁边一次", function()
     local HumRoot = game.Players.LocalPlayer.Character.HumanoidRootPart
     local tp_player = game.Players:FindFirstChild(playernamedied)
     if tp_player and tp_player.Character and tp_player.Character.HumanoidRootPart then
@@ -166,7 +122,7 @@ credits:Button("传送到玩家旁边一次", function()
     end
 end)
 
-credits:Button("把玩家传送过来", function()
+CS:Button("把玩家传送过来", function()
     local HumRoot = game.Players.LocalPlayer.Character.HumanoidRootPart
     local tp_player = game.Players:FindFirstChild(playernamedied)
     if tp_player and tp_player.Character and tp_player.Character.HumanoidRootPart then
@@ -177,7 +133,7 @@ credits:Button("把玩家传送过来", function()
     end
 end)
 
-credits:Toggle("查看玩家", 'Toggleflag', false, function(state)
+CS:Toggle("查看玩家", 'Toggleflag', false, function(state)
     if state then
         game:GetService('Workspace').CurrentCamera.CameraSubject =
             game:GetService('Players'):FindFirstChild(playernamedied).Character.Humanoid
@@ -188,7 +144,7 @@ credits:Toggle("查看玩家", 'Toggleflag', false, function(state)
         game:GetService('Workspace').CurrentCamera.CameraSubject = lp.Character.Humanoid
     end
 end)
-credits:Toggle("循环传送玩家", "Toggle", false, function(Value)
+CS:Toggle("循环传送玩家", "Toggle", false, function(Value)
     if Value then
         local localPlayer = game.Players.LocalPlayer
         local targetPlayer = game.Players:FindFirstChild(playernamedied)
