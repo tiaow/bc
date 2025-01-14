@@ -197,14 +197,13 @@ local credits = creds:section("Doors脚本",true)
     loadstring(game:HttpGet'https://raw.githubusercontent.com/Dusty1234567890/NewGloves/refs/heads/main/Clock')()
     end)
  local creds = window:Tab("力量传奇",'16060333448')
-local credits = creds:section("岩石功能")
-local credits2 = creds:section("跑步机功能")
 local credits3 = creds:section("深蹲架功能")
 local credits4 = creds:section("引体向上功能")
 local credits5 = creds:section("卧推功能")
 local credits6 = creds:section("投掷功能")
 local credits7 = creds:section("自动功能")
-credits7:Toggle("传送安全地方", false, function(place)
+local credits = creds:section("岩石功能")
+credits:Toggle("传送安全地方", false, function(place)
     if place then
 getgenv().place = true
 while getgenv().place do
@@ -422,7 +421,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):UnequipTools()
 end
 end
 end)
-
+local credits2 = creds:section("跑步机功能")
 credits2:Toggle("海滩跑步机10", false, function(treadmill)
     getgenv().spam = treadmill
 while getgenv().spam do
@@ -665,7 +664,7 @@ RunService:UnbindFromRenderStep("move",
 )
 end
 end)
-
+local credits3 = creds:section("深蹲架功能")
 credits3:Toggle("沙滩深蹲架", false, function(rack)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 1000 then
 getgenv().spam = rack
@@ -749,7 +748,7 @@ if not getgenv().spam then
 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
-
+local credits4 = creds:section("引体向上功能")
 credits4:Toggle("引体向上海滩", false, function(pull)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 1000 then
 getgenv().spam = pull
@@ -813,7 +812,7 @@ if not getgenv().spam then
 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
-
+local credits5 = creds:section("卧推功能")
 credits5:Toggle("卧推海滩", false, function(bench)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 150 then
 getgenv().spam = bench
@@ -941,7 +940,7 @@ if not getgenv().spam then
 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
-
+local credits6 = creds:section("投掷功能")
 credits6:Toggle("投掷海滩", false , function(lift)
     if game.Players.LocalPlayer.leaderstats.Strength.Value >= 3000 then
 getgenv().spam = lift
@@ -1025,7 +1024,7 @@ if not getgenv().spam then
 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
-
+local credits7 = creds:section("自动功能")
 noCD = false
 punchCooldown = 0.35
 
