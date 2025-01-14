@@ -197,12 +197,6 @@ local credits = creds:section("Doors脚本",true)
     loadstring(game:HttpGet'https://raw.githubusercontent.com/Dusty1234567890/NewGloves/refs/heads/main/Clock')()
     end)
  local creds = window:Tab("力量传奇",'16060333448')
-local credits3 = creds:section("深蹲架功能")
-local credits4 = creds:section("引体向上功能")
-local credits5 = creds:section("卧推功能")
-local credits6 = creds:section("投掷功能")
-local credits7 = creds:section("自动功能")
-local credits = creds:section("岩石功能")
 credits:Toggle("传送安全地方", false, function(place)
     if place then
 getgenv().place = true
