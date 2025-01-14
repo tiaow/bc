@@ -48,8 +48,9 @@ end)                                                                            
 end)                                                                                            credits:Button("立即死亡",function()
   game.Players.LocalPlayer.Character.Humanoid.Health=0
 end)                                                                                                                                                   
-local credits = creds:section("玩家",true)                                                           
-credits:Toggle(
+local creds = window:Tab("通用2",'16060333448')
+local credits = creds:section("通用",true)
+    credits:Toggle(
     "夜视",
     "text",
     false,
@@ -61,8 +62,6 @@ credits:Toggle(
         end
     end
 )
-
-
   local creds = window:Tab("传送",'16060333448')             
 local credits = creds:section("传送功能",true)
     if getgenv().ED_AntiKick then
