@@ -156,8 +156,7 @@ credits:Toggle("循环传送玩家", "Toggle", false, function(Value)
     else
         
         if teleportConnection then
-            teleportConnection:Disconnect()
-            teleportConnection = nil
+            teleportConnection:Disconnect(
         end
         Notify("credits", "已停止循环传送玩家", "rbxassetid://", 5)
     end
@@ -166,6 +165,12 @@ local creds = window:Tab("伐木大亨2",'16060333448')
 local credits = creds:section("伐木大亨",true)
     credits:Button("伐木大亨2(造船好像也能用)", function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf"))()
-end)
+   end)
+   credits:Button("伐木大亨2)", function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/Kavo-Ui/main/%E4%BC%90%E6%9C%A8%E5%A4%A7%E4%BA%A82.lua", true))()
+   end)
+   credits:Button("LuaWareL", function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))()
+   end)
 local creds = window:Tab("待开发类别",'16060333448')
-local credits = creds:section("待开发",true)
+local credits = creds:section("待开发j",true)
