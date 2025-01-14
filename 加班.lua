@@ -196,15 +196,14 @@ local credits = creds:section("Doors脚本",true)
     credits:Button("巴掌", function()
     loadstring(game:HttpGet'https://raw.githubusercontent.com/Dusty1234567890/NewGloves/refs/heads/main/Clock')()
     end)
-local creds = lib:Window("力量传奇",Color3.fromRGB(0, 255, 0), Enum.KeyCode.E) -- your own keybind 
-
-local tab = creds:Tab("岩石功能")
-local tab2 = creds:Tab("跑步机功能")
-local tab3 = creds:Tab("深蹲架功能")
-local tab4 = creds:Tab("引体向上功能")
-local tab5 = creds:Tab("卧推功能")
-local tab6 = creds:Tab("投掷功能")
-local tab7 = creds:Tab("自动功能")
+ local creds = window:Tab("力量传奇",'16060333448')
+local tab = creds:section("岩石功能")
+local tab2 = creds:section("跑步机功能")
+local tab3 = creds:section("深蹲架功能")
+local tab4 = creds:section("引体向上功能")
+local tab5 = creds:section("卧推功能")
+local tab6 = creds:section("投掷功能")
+local tab7 = creds:section("自动功能")
 
 tab:Toggle("传送安全地方", false, function(place)
     if place then
