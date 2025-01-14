@@ -47,7 +47,23 @@ end)                                                                            
   loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
 end)                                                                                            credits:Button("立即死亡",function()
   game.Players.LocalPlayer.Character.Humanoid.Health=0
-end)                                                                                             local creds = window:Tab("传送",'16060333448')                  
+end)                                                                                                                                                   
+local credits = creds:section("玩家",true)                                                           
+credits:Toggle(
+    "夜视",
+    "text",
+    false,
+    function(Value)
+        if Value then
+            game.Lighting.Ambient = Color3.new(1, 1, 1)
+        else
+            game.Lighting.Ambient = Color3.new(0, 0, 0)
+        end
+    end
+)
+
+
+  local creds = window:Tab("传送",'16060333448')             
 local credits = creds:section("传送功能",true)
     if getgenv().ED_AntiKick then
 	return
@@ -169,3 +185,11 @@ local credits = creds:section("伐木大亨",true)
    credits:Button("伐木大亨脚本", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/Kavo-Ui/main/%E4%BC%90%E6%9C%A8%E5%A4%A7%E4%BA%A82.lua", true))()
    end)
+   local creds = window:Tab("Doors",'16060333448')
+local credits = creds:section("Doors脚本",true)
+    credits:Button("Ms", function()
+    getgenv().Spy="mspaint" loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoXuAnZang/XKscript/refs/heads/main/DOORS.txt"))()
+    end)
+    credits:Button("BoBHub汉化", function()
+ loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\53\84\119\84\56\106\97"))()
+    end)
